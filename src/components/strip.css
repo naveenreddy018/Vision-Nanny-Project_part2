@@ -1,0 +1,122 @@
+.container {
+    display: flex;
+    gap: 50px;
+    height: 100vh;
+    transition: 1s transform;
+    width: 100vw;
+    position: relative;
+
+
+}
+
+.main {
+    display: flex;
+}
+.righ{
+    display: flex;
+    gap: 50px;
+    height: 100vh;
+    transition: 1s transform;
+    width: 100vw;
+    flex-direction: column;
+    /* animation: scrollBg 5s infinite ease-in-out; */
+} 
+
+.btn {
+    position: fixed;
+    top: 10%;
+    left: 90%;
+    font-size: 3rem;
+    background-color: greenyellow;
+    border: none;
+    color: black;
+}
+
+  
+  .strips {
+
+    flex: 0 0 auto;
+ 
+  }
+
+.scroll {
+    transition: 1s transform;
+    animation: scrollBg 5s infinite ease-in-out;
+}
+
+@keyframes scrollBg {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50vh); /* Adjust as needed */
+    }
+  }
+  .options {
+    max-width: 350px; 
+    width: 90%;
+    font-size: 1.2rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: fixed; 
+    background-color: pink;
+    font-weight: 600;
+    right: 1%;
+    top: 2%;
+    justify-content: center;
+    align-items: center;
+   padding-left: 30px;
+   padding-right: 30px;
+    border-radius: 30px;
+    padding-bottom: 25px;
+    overflow-y: auto;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.scrollY{
+    animation: moveD 2s infinite ease-in-out;
+}
+@keyframes moveD {
+    from {
+        transform: translateX(-50px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+
+.animate,form, .direction, .speed, .gap, .str1, .reverse {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 35px;
+    justify-content: center;
+}
+
+.speedchild input, .gapchild input, .str1child input {
+    width: 200px;
+    gap: 15px;
+}
+
+.closebtn {
+    font-size: 5rem;
+    position: relative;
+    top: -5%;
+    left: 35%;
+    height: 50px;
+}
+
+.down{
+   animation: moveD1 1s infinite left;
+}
+
+@keyframes moveD1 {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
