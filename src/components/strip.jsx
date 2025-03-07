@@ -22,9 +22,9 @@ const [animate,setanimate] = useState(false)
       className={ ` container ${direc === "right" ? "righ" : ""} `}
         // className={`container ${stiplen ? "scroll" : ""}`} 
         style={{
-          animation:animate
+          animation: direc == "right" && animate
             ? `scrollBg ${speed}s linear infinite ${direc === "left" ? "reverse" : ""}`
-            : "none",
+            : direc == "left"  && !animate ? `moveU ${speed}s linear infinite ` : ""  ,
             display : "flex",gap : `${gapwid}px` 
         }}
       >

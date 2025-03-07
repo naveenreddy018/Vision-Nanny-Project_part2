@@ -5,8 +5,6 @@
     transition: 1s transform;
     width: 100vw;
     position: relative;
-
-
 }
 
 .main {
@@ -56,22 +54,22 @@
     max-width: 350px; 
     width: 90%;
     font-size: 1.2rem;
-    height: auto;
+    height: 95vh;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 0px;
     position: fixed; 
     background-color: pink;
     font-weight: 600;
     right: 1%;
-    top: 2%;
+    top: 0.5%;
     justify-content: center;
     align-items: center;
-   padding-left: 30px;
-   padding-right: 30px;
+   /* padding-left: 30px;
+   padding-right: 30px; */
     border-radius: 30px;
-    padding-bottom: 25px;
-    overflow-y: auto;
+    /* padding-bottom: 25px; */
+
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .scrollY{
@@ -106,6 +104,7 @@
     top: -5%;
     left: 35%;
     height: 50px;
+    margin: 0px;
 }
 
 .down{
@@ -117,6 +116,18 @@
         transform: translateY(-50px);
     }
     to {
-        transform: translateY(0px);
+        transform: translateY(-10px);
+    }
+}
+.up{
+    animation: moveU  infinite right;
+}
+
+@keyframes moveU {
+    from {
+        transform: translateX(-50px);
+    }
+    to {
+        transform: translateX(0px);
     }
 }
