@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import "./strip.css";
 import Toggle from './toggle';
 
@@ -12,10 +12,12 @@ const [animate,setanimate] = useState(false)
   const change = () => {
     setsriplen(prev => !prev);
   };
+  console.log(animate )
 
-  const setAnimate = (val)=>{
-    setanimate(val)
-  }
+  const setAnimate = useCallback((val) => {
+    setanimate(val);
+  }, []);
+  
   return (
     <div className='main'>
       <div 
@@ -23,8 +25,8 @@ const [animate,setanimate] = useState(false)
         // className={`container ${stiplen ? "scroll" : ""}`} 
         style={{
           animation: direc == "right" && animate
-            ? `scrollBg ${speed}s linear infinite ${direc === "left" ? "reverse" : ""}`
-            : direc == "left"  && !animate ? `moveU ${speed}s linear infinite ` : ""  ,
+            ? `scrollBg ${speed}s linear infinite `
+            : direc == "left"  && animate ? `moveU ${speed/3}s linear infinite ` : ""  ,
             display : "flex",gap : `${gapwid}px` 
         }}
       >
