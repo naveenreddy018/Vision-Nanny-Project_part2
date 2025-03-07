@@ -26,7 +26,7 @@ const [animate,setanimate] = useState(false)
         style={{
           animation: direc == "right" && animate
             ? `scrollBg ${speed}s linear infinite `
-            : direc == "left"  && animate ? `moveU ${speed/4}s linear infinite ` : ""  ,
+            : direc == "left"  && animate ? `moveU ${speed/2}s linear infinite ` : ""  ,
             display : "flex",gap : `${gapwid}px` 
         }}
       >
